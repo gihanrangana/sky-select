@@ -5,7 +5,3 @@ const selectElements = document.querySelectorAll('[sky-select]');
 selectElements.forEach(selectElement => {
     new SkySelect(selectElement);
 })
-
-function onChange(e){
-    console.log(e);
-}
