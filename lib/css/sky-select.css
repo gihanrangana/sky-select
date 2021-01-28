@@ -1,0 +1,80 @@
+.sky-select--container {
+  display: inline-block;
+  position: relative;
+}
+
+.sky-select--container > * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sky-select--container:focus {
+  outline: none;
+  border: none;
+}
+
+.sky-select--container .sky-select--value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+  border: 1px solid #beb4b4;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sky-select--container .sky-select--value::after {
+  content: "";
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top-color: #000000;
+}
+
+.sky-select--container:focus > .sky-select--value {
+  outline: none;
+  border-color: #313131;
+}
+
+.sky-select--container .sky-select--options {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #beb4b4;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+}
+
+.sky-select--container .sky-select--options.show {
+  display: block;
+}
+
+.sky-select--container .sky-select--options .sky-select--option {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.sky-select--container .sky-select--options .sky-select--option.selected {
+  background-color: #3c7ef8;
+  color: #ffffff;
+}
+
+.sky-select--container .sky-select--options .sky-select--option:hover {
+  background-color: #33acdd;
+  color: #ffffff;
+}
+/*# sourceMappingURL=sky-select.css.map */

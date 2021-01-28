@@ -1,0 +1,81 @@
+$primary: #3c7ef8;
+
+$alt: #33acdd;
+
+$light0: #ffffff;
+$light1: #beb4b4;
+
+$dark0: #000000;
+$dark1: #313131;
+$dark2: #666666;
+
+.sky-select--container {
+    display: inline-block;
+    position: relative;
+
+    & > * {
+        box-sizing: border-box;
+    }
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    .sky-select--value {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+        border: 1px solid $light1;
+        border-radius: 4px;
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        user-select: none;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            border: 4px solid transparent;
+            border-top-color: #000000;
+        }
+    }
+
+    &:focus > .sky-select--value{
+        outline:none;
+        border-color: $dark1;
+    }
+
+
+    .sky-select--options {
+        display: none;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        border: 1px solid $light1;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        margin-top: 0.25rem;
+        border-radius: 4px;
+
+        &.show {
+            display: block;
+        }
+
+        .sky-select--option {
+            padding: 0.25rem 0.5rem;
+            cursor: pointer;
+
+            &.selected {
+                background-color: $primary;
+                color: $light0;
+            }
+
+            &:hover {
+                background-color: $alt;
+                color: $light0;
+            }
+        }
+    }
+}
